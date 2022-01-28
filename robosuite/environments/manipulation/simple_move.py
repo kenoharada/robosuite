@@ -118,6 +118,7 @@ class SimpleMove(SingleArmEnv):
         gripper_types="default",
         initialization_noise="default",
         use_camera_obs=True,
+        use_object_obs=False,
         reward_scale=1.0,
         reward_shaping=False,
         has_renderer=False,
@@ -138,6 +139,8 @@ class SimpleMove(SingleArmEnv):
         # reward configuration
         self.reward_scale = reward_scale
         self.reward_shaping = reward_shaping
+        
+        self.use_object_obs = use_object_obs
 
         # whether to use ground-truth object states
 
